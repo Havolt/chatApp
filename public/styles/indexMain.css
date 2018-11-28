@@ -4,3 +4,35 @@ body, html {
     background: #f7f7f7;
 }
 
+.chatInputText {
+    resize: none;
+}
+
+.chatInputText {
+    font-size: 20px;
+    display: inline-block;
+    outline: none;
+    vertical-align: bottom;
+    height: 74px;
+    width: 400px;
+    border: 1px solid rgb(179, 174, 179);
+    
+}
+
+.chatInputButton {
+    outline: none;
+    font-size: 24px;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: bottom;
+    background: rgb(10, 161, 10);
+    height: 80px;
+    padding: 0 8px;
+    color: white;
+    border: none;
+}
+
+.chatInputButton:hover {
+    cursor: pointer;
+    background: rgb(11, 124, 11);
+}
