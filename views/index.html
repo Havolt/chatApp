@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <link rel="stylesheet" href="styles/indexMain.css">
     <title>Chat App</title>
 </head>
 <body>
 
-    <div></div>
+    <div id="app">
+        <div class="chatSec">
+            <div class="chatHead"></div>
+            <div class="chatMain"></div>
+            <div class="chatInput">
+                <div>
+                    <textarea name="chatInputText" class="chatInputText" cols="30" rows="4" ></textarea>
+                    <button class="chatInputButton">Chat</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="scripts/indexMain.js"></script>
     
