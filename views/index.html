@@ -16,8 +16,8 @@
             <div class="chatMain"></div>
             <div class="chatInput">
                 <div>
-                    <textarea name="chatInputText" class="chatInputText" ></textarea>
-                    <button class="chatInputButton">Chat</button>
+                    <textarea v-model="userMessage"  @keydown.enter.prevent @keydown.enter="checkMessage()" name="chatInputText" class="chatInputText"></textarea>
+                    <button @click="checkMessage" class="chatInputButton">Chat</button>
                 </div>
             </div>
         </div>
