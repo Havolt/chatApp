@@ -25,7 +25,13 @@ const vm = new Vue({
         },
         sendMessage: function (message) {
             console.log(message);
-            fetch('/getMessage')
+            fetch('/getMessage', {
+                method: 'post',
+                headers: {
+                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                },
+                body: JSON.stringify(message)
+            })
                 .then((res) => {
                     if(res.status !== 200) {
                         console.log(`There was a problem: ${res.statusText}`);
