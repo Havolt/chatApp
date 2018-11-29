@@ -25,6 +25,17 @@ const vm = new Vue({
         },
         sendMessage: function (message) {
             console.log(message);
+            fetch('/getMessage')
+                .then((res) => {
+                    if(res.status !== 200) {
+                        console.log(`There was a problem: ${res.statusText}`);
+                        return;
+                    } else {
+                        res.json().then((data) => {
+                            console.log(data);
+                        })
+                    }
+                })
         }
     },
     computed: {

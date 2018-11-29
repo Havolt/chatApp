@@ -12,3 +12,7 @@ app.listen(port, () => {
 app.get('/', (req, res) => {
     res.sendFile(`${__dirname}/views/index.html`);
 })
+
+app.get('/getMessage', (req, res) => {
+    res.send({hello: 'hi'});
+})
