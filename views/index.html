@@ -18,12 +18,12 @@
             </div>
             <div class="chatMain">
                 <div class="chatMessages">
-
                 </div>
             </div>
             <div class="chatInput">
                 <textarea v-model="userMessage"  @keydown.enter.prevent @keydown.enter="checkMessage()" name="chatInputText" class="chatInputText"></textarea>
                 <button @click="checkMessage" class="chatInputButton">Chat</button>
+            </div>
         </div>
     </div>
 

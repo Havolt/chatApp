@@ -12,6 +12,7 @@ body, html {
 
 .chatHead {
     border-bottom:1px solid rgb(207, 207, 207);
+    background: white;
 }
 
 .chatTitle {
@@ -25,18 +26,25 @@ body, html {
 .chatSec {
     margin: 0 auto;
     width:100%;
-    background:white;
+    background:rgb(211, 211, 211);
     height: fit-content;
+    text-align: center;
 }
 
 .chatMessages {
     min-height: 400px; 
-    width: inherit;
+    width: 98%;
     padding-bottom: 5px;
+    box-shadow: 0 0 2px grey;
+    margin: 10px auto;
+    border-radius: 2px;
+    background: white;
 }
 
 .chatInput {
-    width: 100%;
+    width: 98%;
+    margin: 0 auto;
+    
     display: inline-flex;
 }
 
