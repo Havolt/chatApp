@@ -4,32 +4,68 @@ body, html {
     background: #f7f7f7;
 }
 
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.chatHead {
+    border-bottom:1px solid rgb(207, 207, 207);
+}
+
+.chatTitle {
+    font-weight: bold;
+    font-size: 28px;
+    padding-left:4px;
+    width: fit-content;
+    color:rgb(50, 50, 155);
+}
+
+.chatSec {
+    margin: 0 auto;
+    width:100%;
+    background:white;
+    height: fit-content;
+}
+
+.chatMessages {
+    min-height: 400px; 
+    width: inherit;
+    padding-bottom: 5px;
+}
+
+.chatInput {
+    width: 100%;
+    display: inline-flex;
+}
+
 .chatInputText {
     resize: none;
 }
 
 .chatInputText {
     font-size: 20px;
-    display: inline-block;
     outline: none;
     vertical-align: bottom;
-    height: 74px;
-    width: 400px;
+    height: 80px;
+    width: 90%;
     border: 1px solid rgb(179, 174, 179);
-    
+    box-sizing: border-box;
 }
 
 .chatInputButton {
     outline: none;
     font-size: 24px;
-    border-radius: 3px;
-    display: inline-block;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
     vertical-align: bottom;
     background: rgb(10, 161, 10);
     height: 80px;
-    padding: 0 8px;
+    width:10%;
     color: white;
     border: none;
+    box-sizing: border-box;
 }
 
 .chatInputButton:hover {

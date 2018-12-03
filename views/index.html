@@ -13,14 +13,17 @@
 
     <div id="app">
         <div class="chatSec">
-            <div class="chatHead"></div>
-            <div class="chatMain"></div>
-            <div class="chatInput">
-                <div>
-                    <textarea v-model="userMessage"  @keydown.enter.prevent @keydown.enter="checkMessage()" name="chatInputText" class="chatInputText"></textarea>
-                    <button @click="checkMessage" class="chatInputButton">Chat</button>
+            <div class="chatHead">
+                <div class="chatTitle">MarkChat</div>
+            </div>
+            <div class="chatMain">
+                <div class="chatMessages">
+
                 </div>
             </div>
+            <div class="chatInput">
+                <textarea v-model="userMessage"  @keydown.enter.prevent @keydown.enter="checkMessage()" name="chatInputText" class="chatInputText"></textarea>
+                <button @click="checkMessage" class="chatInputButton">Chat</button>
         </div>
     </div>
 
