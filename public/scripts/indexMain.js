@@ -1,12 +1,16 @@
 
-var socket = io.connect('/');
+const socket = io.connect('/');
 
-socket.on('welcome', (data) =>{
-    console.log(data);
-})
+
+
+
+
+
+
+const chatLog = [];
 
 function initApp(){
-    console.log('here');
+
 }
 
 const vm = new Vue({
@@ -18,7 +22,6 @@ const vm = new Vue({
     methods: {
         checkMessage: function() {
             if(this.userMessage.length > 0) {
-                console.log(this.userMessage)
                 const thisMessage = {};
                 thisMessage.txt = vm.userMessage;
                 thisMessage.user = vm.userName;
@@ -29,7 +32,7 @@ const vm = new Vue({
             } 
         },
         sendMessage: function (message) {
-            console.log(message);
+
             fetch('/getMessage', {
                 method: 'post',
                 headers: {
