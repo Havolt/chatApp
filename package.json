@@ -10,16 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/Havolt/chatApp.git"
   },
-  "author": "Mark Anthony",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Havolt/chatApp/issues"
   },
   "homepage": "https://github.com/Havolt/chatApp#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "socket.io": "^2.2.0"
-  },
-  "devDependencies": {}
+  }
 }
