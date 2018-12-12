@@ -1,3 +1,7 @@
+const socket = io();
+
+
+
 
 function getMessage(msg, delMsg) {
     console.log(msg);
@@ -9,11 +13,11 @@ function deleteMessage() {
 };
 
 function addEvtListners() {
-    document.querySelector('.chatInputButton').addEventListener('click', () => {
-        getMessage();
+    document.querySelector('.chatInputButton').addEventListener('click', (e) => {
+        getMessage(e.target.parentElement.children[0].value, deleteMessage)
     })
     document.querySelector('.chatInputTxt').addEventListener('keydown', (e) => {
-        if(e.keyCode == 13) { getMessage(e.target.value, deleteMessage) }
+        if(e.keyCode == 13) { getMessage(e.target.value, deleteMessage)}
     })
 };
 

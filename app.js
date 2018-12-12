@@ -1,13 +1,18 @@
 const express = require('express');
 const app = express();
-
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
 const port = 3000;
 
 app.use(express.static(`${__dirname}/public`));
 
-app.listen(port, () => {
+http.listen(port, () => {
     console.log(`Listening on port ${port}`);
 })
+
+io.on('connection', function(socket){
+    console.log('a user connected');
+});
 
 app.get('/', (req, res) => {
     res.sendFile(`${__dirname}/views/index.html`);
