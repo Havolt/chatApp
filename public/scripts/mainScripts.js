@@ -1,5 +1,7 @@
 const socket = io();
 
+const chatArr = [];
+
 socket.on('chat message', (msg) => {
     writeMessage(msg);
 })
@@ -8,23 +10,35 @@ function writeMessage(msg) {
     console.log(msg)
 }
 
-function getMessage(msg, delMsg) {
-    socket.emit('chat message', msg);
-    delMsg();
-}
+// function getMessage(msg, delMsg) {
+//     socket.emit('chat message', msg);
+//     delMsg();
+// }
 
 function deleteMessage() {
     document.querySelector('.chatInputTxt'). value = '';
 };
 
 function addEvtListners() {
-    document.querySelector('.chatInputButton').addEventListener('click', (e) => {
-        getMessage(e.target.parentElement.children[0].value, deleteMessage)
-    })
-    document.querySelector('.chatInputTxt').addEventListener('keydown', (e) => {
-        if(e.keyCode == 13) { getMessage(e.target.value, deleteMessage)}
-    })
+    // document.querySelector('.chatInputButton').addEventListener('click', (e) => {
+    //     getMessage(e.target.parentElement.children[0].value, deleteMessage)
+    // })
+    // document.querySelector('.chatInputTxt').addEventListener('keydown', (e) => {
+    //     if(e.keyCode == 13) { getMessage(e.target.value, deleteMessage)}
+    // })
 };
+
+const vm = new Vue({
+    el: '#app',
+    data: {
+        userMessage: ''
+    }, 
+    methods: {
+        getMessage: (dataName) => {
+            console.log(vm[dataName]);
+        }
+    }
+});
 
 (function initApp(){
     addEvtListners();

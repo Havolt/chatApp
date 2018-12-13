@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chat App</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <link rel="stylesheet" href="styles/mainStyles.css">
     <script src="scripts/socket.io.js"></script>
 </head>
@@ -12,8 +13,8 @@
 
     <div id="app">
         <div class="chatInputSec">
-            <input class="chatInputEl chatInputTxt" type="text">
-            <button class="chatInputEl chatInputButton">Go</button>
+            <input v-model="userMessage" @keydown.enter="getMessage('userMessage')" class="chatInputEl chatInputTxt" type="text">
+            <button @click="getMessage('userMessage')" class="chatInputEl chatInputButton">Go</button>
         </div>
     </div>
 
