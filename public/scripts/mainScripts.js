@@ -44,12 +44,17 @@ const vm = new Vue({
         },
         getMessage: (dataName) => {
             if(vm.userMessage.length > 0) {
-                socket.emit('chat message', vm[dataName]);
+                const newOb = {
+                    msg: vm[dataName],
+                    name: vm.usernameFinal,
+                    time: new Date()
+                }
+                socket.emit('chat message', newOb);
                 vm.userMessage = '';
             }
         },
         writeMessage: (msg) => {
-            console.log(msg)
+            chatArr.push(msg);
         }
     }
 });
