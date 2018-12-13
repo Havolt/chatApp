@@ -17,7 +17,10 @@
             <div class="chatHeaderUsername">{{usernameFinal}}</div>
         </div>
         <div class="chatMain">
-            <div class="chatMainSec"></div>
+            <div class="chatMainSec" v-for="chat in chatArr">
+                <div>{{chat.name}}: </div>
+                <div>{{chat.msg}}</div>
+            </div>
         </div>
         <div class="chatInputCon">
             <div v-bind:class="{hidden: !usernameBool}" class="chatInputSec">

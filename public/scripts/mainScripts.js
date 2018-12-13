@@ -1,7 +1,5 @@
 const socket = io();
 
-const chatArr = [];
-
 socket.on('chat message', (msg) => {
     vm.writeMessage(msg);
 })
@@ -32,7 +30,8 @@ const vm = new Vue({
         username: '',
         usernameFinal: '',
         userMessage: '',
-        usernameBool: false
+        usernameBool: false,
+        chatArr : []
 
     }, 
     methods: {
@@ -54,7 +53,7 @@ const vm = new Vue({
             }
         },
         writeMessage: (msg) => {
-            chatArr.push(msg);
+            vm.chatArr.push(msg);
         }
     }
 });

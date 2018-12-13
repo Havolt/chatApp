@@ -1,4 +1,37 @@
 
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.chatHeader{
+    border-bottom: 1px solid rgb(216, 216, 216);
+    display: flex;
+}
+
+.chatHeader > div {
+    width: 50%;
+}
+
+.chatHeaderTitle {
+    font-size: 28px;
+    font-weight: bold;
+    text-indent: 1%;
+}
+
+.chatHeaderUsername {
+    font-size: 22px;
+    color: rgb(17, 153, 17);
+    text-align: right;
+    padding-right: 1%;
+    vertical-align: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 .hidden {
     display: none;
 }
