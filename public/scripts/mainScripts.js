@@ -30,6 +30,7 @@ const vm = new Vue({
     el: '#app',
     data: {
         username: '',
+        usernameFinal: '',
         userMessage: '',
         usernameBool: false
 
@@ -38,6 +39,7 @@ const vm = new Vue({
         setUsername: () => {
             if(vm.username.length > 2) {
                 vm.usernameBool = true;
+                vm.usernameFinal = vm.username;
             }
         },
         getMessage: (dataName) => {
