@@ -3,12 +3,10 @@ const socket = io();
 const chatArr = [];
 
 socket.on('chat message', (msg) => {
-    writeMessage(msg);
+    vm.writeMessage(msg);
 })
 
-function writeMessage(msg) {
-    console.log(msg)
-}
+
 
 // function getMessage(msg, delMsg) {
 //     socket.emit('chat message', msg);
@@ -31,14 +29,30 @@ function addEvtListners() {
 const vm = new Vue({
     el: '#app',
     data: {
-        userMessage: ''
+        username: '',
+        userMessage: '',
+        usernameBool: false
+
     }, 
     methods: {
+        setUsername: () => {
+            if(vm.username.length > 2) {
+                vm.usernameBool = true;
+            }
+        },
         getMessage: (dataName) => {
-            console.log(vm[dataName]);
+            if(vm.userMessage.length > 0) {
+                socket.emit('chat message', vm[dataName]);
+                vm.userMessage = '';
+            }
+        },
+        writeMessage: (msg) => {
+            console.log(msg)
         }
     }
 });
+
+
 
 (function initApp(){
     addEvtListners();
