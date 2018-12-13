@@ -1,10 +1,15 @@
 const socket = io();
 
+socket.on('chat message', (msg) => {
+    writeMessage(msg);
+})
 
-
+function writeMessage(msg) {
+    console.log(msg)
+}
 
 function getMessage(msg, delMsg) {
-    console.log(msg);
+    socket.emit('chat message', msg);
     delMsg();
 }
 
