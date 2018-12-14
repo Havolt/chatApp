@@ -1,11 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 
 html, body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+input {
+    border: 1px solid rgb(173, 172, 172);
+}
+
 .chatHeader{
     border-bottom: 1px solid rgb(216, 216, 216);
     display: flex;
+    margin-bottom: 10px;
 }
 
 .chatHeader > div {
@@ -26,11 +36,44 @@ html, body {
     vertical-align: center;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
+.chatMsgCon  {
+    display: flex;
+    font-size: 18px;
 }
+
+.chatMsgUsername {
+    text-align: right;
+    padding-right: 2%;
+    width: 10%;
+}
+
+.chatMsgMessage {
+    width: 90%;
+}
+
+.chatInputCon {
+    position: fixed;
+    bottom: 10px;
+    display: flex;
+    width: 100%;
+}
+
+.chatInputSec {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.chatInputTxt {
+    box-sizing: border-box;
+    width: 80%;
+    height: 100px;
+}
+
+.chatInputButton{
+    width: 140px;
+    height: 100px;
+}
+
 
 .hidden {
     display: none;

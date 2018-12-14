@@ -18,8 +18,10 @@
         </div>
         <div class="chatMain">
             <div class="chatMainSec" v-for="chat in chatArr">
-                <div>{{chat.name}}: </div>
-                <div>{{chat.msg}}</div>
+                <div class="chatMsgCon">
+                    <div class="chatMsgUsername">{{chat.name}}: </div>
+                    <div class="chatMsgMessage">{{chat.msg}}</div>
+                </div>    
             </div>
         </div>
         <div class="chatInputCon">
