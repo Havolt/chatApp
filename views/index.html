@@ -12,6 +12,15 @@
 <body>
 
     <div id="app">
+        <div class="setUsernameContain" v-bind:class="{hidden: usernameBool}">
+            <div class="setUsernameBack">
+                <div class="setUsernameTitle">Enter your username</div>
+                <div>
+                    <input class="setUsernameInp" @keydown.enter="setUsername" v-model="username" type="text">
+                    <button class="setUsernameBut" @click="setUsername">Enter</button>
+                </div>
+            </div>
+        </div>
         <div class="chatHeader">
             <div class="chatHeaderTitle">MarkChat</div>
             <div class="chatHeaderUsername">{{usernameFinal}}</div>
@@ -28,10 +37,6 @@
             <div v-bind:class="{hidden: !usernameBool}" class="chatInputSec">
                 <input v-model="userMessage" @keydown.enter="getMessage('userMessage')" class="chatInputEl chatInputTxt" type="text">
                 <button @click="getMessage('userMessage')" class="chatInputEl chatInputButton">Send</button>
-            </div>
-            <div v-bind:class="{hidden: usernameBool}">
-                <input @keydown.enter="setUsername" v-model="username" type="text" placeholder="Enter a username..">
-                <button @click="setUsername">Enter</button>
             </div>
         </div>
     </div>

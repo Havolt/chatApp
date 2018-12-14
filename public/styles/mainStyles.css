@@ -12,6 +12,65 @@ input {
     border: 1px solid rgb(173, 172, 172);
 }
 
+.setUsernameContain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(20, 20, 20, 0.8);
+}
+
+.setUsernameBack {
+    width: 60%;
+    height: 30%;
+    min-height: 100px;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: #f7f7f7;
+    border-radius: 10px;
+    box-sizing: border-box;
+    
+}
+
+.setUsernameTitle {
+    padding-top: 20px;
+    font-size: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.setUsernameBack > div {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.setUsernameInp {
+    width: 400px;
+    font-size: 25px;
+    height: 36px;
+    box-sizing: border-box;
+    text-indent: 4px;
+}
+
+.setUsernameBut {
+    display: block;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    width: 80px;
+    font-size: 26px;
+    height: 36px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.setUsernameBut:hover { 
+    cursor: pointer;
+}
+
 .chatHeader{
     border-bottom: 1px solid rgb(216, 216, 216);
     display: flex;
