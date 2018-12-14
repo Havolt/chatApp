@@ -12,6 +12,10 @@ input {
     border: 1px solid rgb(173, 172, 172);
 }
 
+textarea {
+    border: 1px solid rgb(173, 172, 172);
+}
+
 .setUsernameContain {
     position: absolute;
     top: 0;
@@ -37,7 +41,7 @@ input {
 
 .setUsernameTitle {
     padding-top: 20px;
-    font-size: 30px;
+    font-size: 32px;
     padding-bottom: 20px;
     text-align: center;
     font-weight: bold;
@@ -50,25 +54,49 @@ input {
 
 .setUsernameInp {
     width: 400px;
-    font-size: 25px;
-    height: 36px;
+    font-size: 26px;
+    height: 40px;
     box-sizing: border-box;
     text-indent: 4px;
+    outline: none;
+}
+
+.setUsernameWarn {
+    text-indent: 5px;
+    font-size: 12px;
+    color: rgb(192, 46, 46);
+    height: 14px;
+}
+
+@keyframes usernameShakeAn {
+    0%{transform: translateX(0)}
+    25%{transform: translateX(5%)}
+    75%{transform: translateX(-5%)}
+    100%{transform: translateX(0)}
+}
+
+.usernameShake {
+    border: 1px solid red;
+    animation: usernameShakeAn 0.5s forwards;
 }
 
 .setUsernameBut {
     display: block;
     text-align: center;
     margin: 20px auto 0 auto;
-    width: 80px;
+    width: 100px;
     font-size: 26px;
-    height: 36px;
+    height: 50px;
+    border-radius: 3px;
     box-sizing: border-box;
     outline: none;
+    background: rgb(38, 147, 219);
+    color: white;
 }
 
 .setUsernameBut:hover { 
     cursor: pointer;
+    background: rgb(19, 107, 165);
 }
 
 .chatHeader{
@@ -118,11 +146,14 @@ input {
 }
 
 .chatInputSec {
+    display: flex;
     width: 90%;
     margin: 0 auto;
+    
 }
 
 .chatInputTxt {
+    font-size: 18px;
     box-sizing: border-box;
     width: 80%;
     height: 100px;

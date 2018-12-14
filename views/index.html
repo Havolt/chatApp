@@ -16,7 +16,8 @@
             <div class="setUsernameBack">
                 <div class="setUsernameTitle">Enter your username</div>
                 <div>
-                    <input class="setUsernameInp" @keydown.enter="setUsername" v-model="username" type="text">
+                    <input v-bind:class="{usernameShake}" class="setUsernameInp" @keydown.enter="setUsername" v-model="username" type="text">
+                    <div class="setUsernameWarn">{{usernameWarn}}</div>
                     <button class="setUsernameBut" @click="setUsername">Enter</button>
                 </div>
             </div>
@@ -35,7 +36,7 @@
         </div>
         <div class="chatInputCon">
             <div v-bind:class="{hidden: !usernameBool}" class="chatInputSec">
-                <input v-model="userMessage" @keydown.enter="getMessage('userMessage')" class="chatInputEl chatInputTxt" type="text">
+                <textarea  v-model="userMessage" @keydown.enter="getMessage('userMessage')" class="chatInputEl chatInputTxt" ></textarea>
                 <button @click="getMessage('userMessage')" class="chatInputEl chatInputButton">Send</button>
             </div>
         </div>

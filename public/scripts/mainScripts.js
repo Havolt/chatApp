@@ -28,6 +28,8 @@ const vm = new Vue({
     el: '#app',
     data: {
         username: '',
+        usernameWarn: '',
+        usernameShake: false,
         usernameFinal: '',
         userMessage: '',
         usernameBool: false,
@@ -39,6 +41,10 @@ const vm = new Vue({
             if(vm.username.length > 2) {
                 vm.usernameBool = true;
                 vm.usernameFinal = vm.username;
+            }
+            else {
+                vm.usernameWarn = '* Please enter a name longer than 3 characters';
+                vm.usernameShake = true;
             }
         },
         getMessage: (dataName) => {
