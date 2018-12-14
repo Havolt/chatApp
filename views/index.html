@@ -36,8 +36,8 @@
         </div>
         <div class="chatInputCon">
             <div v-bind:class="{hidden: !usernameBool}" class="chatInputSec">
-                <textarea  v-model="userMessage" @keydown.enter="getMessage('userMessage')" class="chatInputEl chatInputTxt" ></textarea>
-                <button @click="getMessage('userMessage')" class="chatInputEl chatInputButton">Send</button>
+                <textarea  v-model="userMessage" @keydown.enter="getMessage('userMessage', $event)" class="chatInputEl chatInputTxt" ></textarea>
+                <button @click="getMessage('userMessage', $event)" class="chatInputEl chatInputButton">Send</button>
             </div>
         </div>
     </div>

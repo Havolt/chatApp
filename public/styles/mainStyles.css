@@ -140,7 +140,7 @@ textarea {
 
 .chatInputCon {
     position: fixed;
-    bottom: 10px;
+    bottom: 20px;
     display: flex;
     width: 100%;
 }
@@ -157,13 +157,21 @@ textarea {
     box-sizing: border-box;
     width: 80%;
     height: 100px;
+    padding: 5px;
 }
 
 .chatInputButton{
     width: 140px;
     height: 100px;
+    background: rgb(38, 147, 219);
+    color: white;
+    font-size: 26px;
 }
 
+.chatInputButton:hover {
+    cursor: pointer;
+    background: rgb(19, 107, 165);
+}
 
 .hidden {
     display: none;

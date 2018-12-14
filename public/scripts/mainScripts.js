@@ -47,7 +47,8 @@ const vm = new Vue({
                 vm.usernameShake = true;
             }
         },
-        getMessage: (dataName) => {
+        getMessage: (dataName, evt) => {
+            evt.preventDefault();
             if(vm.userMessage.length > 0) {
                 const newOb = {
                     msg: vm[dataName],
