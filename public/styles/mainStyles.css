@@ -13,6 +13,7 @@ html, body {
 #app {
     height: 100vh;
     overflow: hidden;
+    background: #f7f7f7;
 }
 
 input {
@@ -30,6 +31,7 @@ textarea {
     height: 100%;
     width: 100%;
     background: rgba(20, 20, 20, 0.8);
+    z-index: 100;
 }
 
 .setUsernameBack {
@@ -109,7 +111,6 @@ textarea {
 .chatHeader{
     border-bottom: 1px solid rgb(216, 216, 216);
     display: flex;
-    margin-bottom: 10px;
 }
 
 .chatHeader > div {
@@ -136,9 +137,12 @@ textarea {
     height: calc(100vh - 164px);
     max-height: calc(100vh - 180px);
     overflow: auto;
+    background: white;
+    padding-top: 10px;
 }
 
 .chatBottom {
+    border-top: 1px solid rgb(204, 204, 204);
     height: 120px;
     position: relative;
     bottom: 0;
