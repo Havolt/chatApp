@@ -61,6 +61,10 @@ const vm = new Vue({
         },
         writeMessage: (msg) => {
             vm.chatArr.push(msg);
+            if(document.querySelector('.chatMain').scrollHeight > document.querySelector('.chatMain').clientHeight) {
+                console.log('got overflow')
+                document.querySelector('.chatMain').scrollTop = document.querySelector('.chatMain').scrollHeight;
+            }
         }
     }
 });
